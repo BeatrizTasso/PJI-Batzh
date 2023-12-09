@@ -16,7 +16,8 @@ function Register({ history }) {
         phoneNumber: '',
         email: "",
         password: "",
-        repeatPassword: ""
+        repeatPassword: "",
+        client: ""
     });
 
     const handleChanges = (e) => {
@@ -101,6 +102,14 @@ function Register({ history }) {
                             <Form.Control type="password" name="repeatPassword" placeholder="Repeat password" onChange={handleChanges} required />
                         </Form.Group>
                     </Form.Row>
+                    <Form.Row>
+                        <Form.Label>Status *</Form.Label>
+                        <Form.Control id='status' as="select" name="gender" onChange={handleChanges} required>
+                                    <option value='cliente'>Cliente</option>
+                                    <option value='empresa'>Empresa</option>
+                        </Form.Control>
+                    </Form.Row>
+                    
                     {loading ?
                         <Button className="col-lg-12 btnAuth" variant="dark" disabled >
                             Please wait... <Spinner animation="border" />
