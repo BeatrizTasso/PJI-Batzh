@@ -24,7 +24,7 @@ function SubmitForm({ chatId }) {
                             onChange={(e) => setText(e.target.value)}>
                         </Form.Control>
                         <InputGroup.Append>
-                            <Button type="submit" variant="secondary">Sent</Button>
+                            <Button type="submit" variant="secondary">Enviar</Button>
                         </InputGroup.Append>
                     </InputGroup>
                 </Form.Group>

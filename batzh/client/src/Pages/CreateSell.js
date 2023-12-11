@@ -57,7 +57,7 @@ class AddProduct extends Component {
             <>
                 <SimpleSider />
                 <div className='container'>
-                    <h1 className="heading">Add a Product</h1>
+                    <h1 className="heading">Adicionar um produto</h1>
                     <Form onSubmit={this.onSubmitHandler}>
                         {this.state.alertShow &&
                             <Alert variant="danger" onClose={() => this.setState({ alertShow: false })} dismissible>
@@ -68,43 +68,41 @@ class AddProduct extends Component {
                         }
                         <Form.Row>
                             <Form.Group as={Col} controlId="formGridTitle">
-                                <Form.Label>Title</Form.Label>
-                                <Form.Control type="text" placeholder="Enter title" name="title" required onChange={this.onChangeHandler} />
+                                <Form.Label>Nome</Form.Label>
+                                <Form.Control type="text" placeholder="Nome do produto" name="title" required onChange={this.onChangeHandler} />
                             </Form.Group>
 
                             <Form.Group as={Col} controlId="formGridPrice">
-                                <Form.Label>Price</Form.Label>
-                                <Form.Control type="number" step="0.01" placeholder="Price" name="price" required onChange={this.onChangeHandler} />
+                                <Form.Label>Valor unitário</Form.Label>
+                                <Form.Control type="number" step="0.01" placeholder="Valor" name="price" required onChange={this.onChangeHandler} />
                             </Form.Group>
                         </Form.Row>
 
                         <Form.Group controlId="formGridDescription.ControlTextarea1">
-                            <Form.Label>Description</Form.Label>
-                            <Form.Control as="textarea" rows={3} name="description" required onChange={this.onChangeHandler} />
+                            <Form.Label>Descrição</Form.Label>
+                            <Form.Control as="textarea" rows={3} name="descrição" required onChange={this.onChangeHandler} />
                         </Form.Group>
 
                         <Form.Row>
                             <Form.Group as={Col} controlId="formGridCity">
-                                <Form.Label>City</Form.Label>
-                                <Form.Control name="city" placeholder="Sofia" required onChange={this.onChangeHandler} />
+                                <Form.Label>Cidade</Form.Label>
+                                <Form.Control name="city" placeholder="Cidade" required onChange={this.onChangeHandler} />
                             </Form.Group>
 
                             <Form.Group as={Col} controlId="formGridCategory">
-                                <Form.Label>Category</Form.Label>
+                                <Form.Label>Categoria</Form.Label>
                                 <Form.Control as="select" defaultValue="Choose..." name="category" required onChange={this.onChangeHandler}>
-                                    <option>Choose...</option>
-                                    <option>properties</option>
-                                    <option>auto</option>
-                                    <option>electronics</option>
-                                    <option>clothes</option>
-                                    <option>toys</option>
-                                    <option>home</option>
-                                    <option>garden</option>
+                                    <option>Escolha...</option>
+                                    <option>Doces</option>
+                                    <option>Salgados</option>
+                                    <option>Roupas</option>
+                                    <option>Brinquedos</option>
+                                    <option>Acessórios</option>
                                 </Form.Control>
                             </Form.Group>
 
                             <Form.Group as={Col} controlId="formGridImage" >
-                                <Form.Label>Image</Form.Label>
+                                <Form.Label>Imagem</Form.Label>
                                 <Form.Control name="image" type="file" required onChange={this.onChangeHandler} />
                             </Form.Group>
                         </Form.Row>
@@ -113,7 +111,7 @@ class AddProduct extends Component {
                                 Please wait... <Spinner animation="border" />
                             </Button>
                             :
-                            <Button className="col-lg-12" variant="dark" type="submit">Add product</Button>
+                            <Button className="col-lg-12" variant="dark" type="submit">Adicionar Produto</Button>
                         }
                     </Form>
                 </div>

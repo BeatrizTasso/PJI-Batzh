@@ -40,7 +40,7 @@ function Login({ history }) {
         <>
             <SimpleSider />
             <div className="container auth-form">
-                <h1 className="auth-heading">Sign In</h1>
+                <h1 className="auth-heading">Login</h1>
                 <Form className="col-lg-6" onSubmit={handleSubmitLogin}>
                     {alertShow &&
                         <Alert variant="danger" onClose={() => setAlertShow(false)} dismissible>
@@ -50,11 +50,11 @@ function Login({ history }) {
                         </Alert>
                     }
                     <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
+                        <Form.Label>Email</Form.Label>
                         <Form.Control type="email" name="email" placeholder="Enter email" onChange={handleChanges} required />
                     </Form.Group>
                     <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
+                        <Form.Label>Senha</Form.Label>
                         <Form.Control type="password" name="password" placeholder="Password" onChange={handleChanges} required />
                     </Form.Group>
                     {loading ?
@@ -62,9 +62,9 @@ function Login({ history }) {
                             Please wait... <Spinner animation="border" />
                         </Button>
                         :
-                        <Button variant="dark" className="col-lg-12 btnAuth" type="submit">Sign In</Button>
+                        <Button variant="dark" className="col-lg-12 btnAuth" type="submit">Login</Button>
                     }
-                    <p className="bottom-msg-paragraph">Don't have an account? <Link to="/auth/register">Sign Up</Link>!</p>
+                    <p className="bottom-msg-paragraph">Não tem uma conta? <Link to="/auth/register">Cadastre-se</Link>!</p>
                 </Form>
             </div>
         </>

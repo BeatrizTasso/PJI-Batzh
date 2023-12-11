@@ -63,7 +63,7 @@ function Messages({ match }) {
         <Container>
             <Row>
                 <aside className="col-lg-4 col-md-4">
-                    <h3>Conversations</h3>
+                    <h3>Conversas</h3>
                     {conversations.length >= 1 ?
                         <>
                             {conversations.map(x =>
@@ -79,7 +79,7 @@ function Messages({ match }) {
                             }
                         </>
                         :
-                        <h5>No messages yet</h5>
+                        <h5>Nenhuma mensagem</h5>
                     }
                 </aside>
                 <article className="col-lg-8 col-md-8">
@@ -123,7 +123,7 @@ function Messages({ match }) {
                                                 onChange={(e) => setMessage(e.target.value)}>
                                             </Form.Control>
                                             <InputGroup.Append>
-                                                <Button type="submit" variant="secondary">Sent</Button>
+                                                <Button type="submit" variant="secondary">Enviar</Button>
                                             </InputGroup.Append>
                                         </InputGroup>
                                     </Form.Group>

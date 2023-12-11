@@ -44,7 +44,7 @@ function Register({ history }) {
         <>
             <SimpleSider />
             <div className="container auth-form">
-                <h1 className="auth-heading">Sign Up</h1>
+                <h1 className="auth-heading">Cadastrar-se</h1>
                 <Form className="col-lg-8" onSubmit={handleSubmitReg}>
                     {alertShow &&
                         <Alert variant="danger" onClose={() => setAlertShow(false)} dismissible>
@@ -55,10 +55,10 @@ function Register({ history }) {
                     }
                     <Form.Row>
                         <Form.Group controlId="forName" className="col-lg-8">
-                            <Form.Label>Name *</Form.Label>
+                            <Form.Label>Nome *</Form.Label>
                             <Form.Control type="text" name="name" placeholder="Ivan Ivanov" onChange={handleChanges} required />
                             <Form.Text muted>
-                                The name can be your real one or a username.
+                                O nome pode ser real ou um username.
                             </Form.Text>
                         </Form.Group>
                         {/* <Form.Group controlId="forLastName" className="col-lg-4">
@@ -66,17 +66,17 @@ function Register({ history }) {
                             <Form.Control type="text" name="lastName" placeholder="Ivanov" onChange={handleChanges} />
                         </Form.Group> */}
                         <Form.Group as={Col} controlId="formGridGender" className="col-lg-4">
-                            <Form.Label>Gender</Form.Label>
+                            <Form.Label>Genêro</Form.Label>
                             <Form.Control as="select" defaultValue="not specified" name="gender" onChange={handleChanges}>
-                                <option>male</option>
-                                <option>female</option>
-                                <option>not specified</option>
+                                <option>masculino</option>
+                                <option>feminino</option>
+                                <option>prefiro não dizer</option>
                             </Form.Control>
                         </Form.Group>
                     </Form.Row>
                     <Form.Row>
                         <Form.Group className="col-lg-12">
-                            <Form.Label>Phone Number *</Form.Label>
+                            <Form.Label>Número de celular *</Form.Label>
                             <Form.Control type="text" name="phoneNumber" placeholder="+359888888888" onChange={handleChanges} required />
                             {/*<Form.Text muted>
                                 Phone Number should be a valid BG number.
@@ -85,29 +85,22 @@ function Register({ history }) {
                     </Form.Row>
                     <Form.Row>
                         <Form.Group controlId="formBasicEmail" className="col-lg-12">
-                            <Form.Label>Email address *</Form.Label>
+                            <Form.Label>Email *</Form.Label>
                             <Form.Control type="email" name="email" placeholder="ivan@abv.bg" onChange={handleChanges} required />
                         </Form.Group>
                     </Form.Row>
                     <Form.Row>
                         <Form.Group controlId="formBasicPassword" className="col-lg-6">
-                            <Form.Label>Password *</Form.Label>
+                            <Form.Label>Senha *</Form.Label>
                             <Form.Control type="password" name="password" placeholder="Password" onChange={handleChanges} required />
                             <Form.Text muted>
-                                Your password must be 8-20 characters long
+                                Sua senha precisa ter mais de 8 caracteres.
                             </Form.Text>
                         </Form.Group>
                         <Form.Group className="col-lg-6">
-                            <Form.Label>Reepeat Password *</Form.Label>
+                            <Form.Label>Digite sua senha novamente *</Form.Label>
                             <Form.Control type="password" name="repeatPassword" placeholder="Repeat password" onChange={handleChanges} required />
                         </Form.Group>
-                    </Form.Row>
-                    <Form.Row>
-                        <Form.Label>Status *</Form.Label>
-                        <Form.Control id='status' as="select" name="gender" onChange={handleChanges} required>
-                                    <option value='cliente'>Cliente</option>
-                                    <option value='empresa'>Empresa</option>
-                        </Form.Control>
                     </Form.Row>
                     
                     {loading ?
@@ -115,10 +108,10 @@ function Register({ history }) {
                             Please wait... <Spinner animation="border" />
                         </Button>
                         :
-                        <Button variant="dark" className="col-lg-12 btnAuth" type="submit">Sign Up</Button>
+                        <Button variant="dark" className="col-lg-12 btnAuth" type="submit">Cadastrar-se</Button>
                     }
 
-                    <p className="bottom-msg-paragraph">Already have an account? <Link to="/auth/login">Sign In</Link>!</p>
+                    <p className="bottom-msg-paragraph">Já tem uma conta? <Link to="/auth/login">Login</Link>!</p>
                 </Form>
             </div>
         </>

@@ -10,12 +10,12 @@ function Header() {
     const { userData, setUserData } = useContext(Context)
     const page = window.open('./pages/register')
 
-    page.addEventListener('DOMContentLoaded', () => {
-        const EmpCli = page.document.getElementById('status')
-        if (EmpCli == 'empresa') {
+ //    page.addEventListener('DOMContentLoaded', () => {
+ //       const EmpCli = page.document.getElementById('status')
+ //       if (EmpCli == 'empresa') {
             
-        }
-    })
+ //       }
+ //   })
     return (
         <Navbar collapseOnSelect bg="light" variant="light">
             <div className="container">
@@ -34,7 +34,7 @@ function Header() {
                                 <OverlayTrigger key="bottom" placement="bottom"
                                     overlay={
                                         <Tooltip id={`tooltip-bottom`}>
-                                            <strong>Add</strong>  a sell.
+                                            <strong>Adicionar</strong> um produto.
                                         </Tooltip>
                                     }
                                 > 
@@ -44,7 +44,7 @@ function Header() {
 
                             <NavDropdown title={<img id="navImg" src={userData.avatar} alt="user-avatar"/>} drop="left" id="collasible-nav-dropdown">
                                 <NavLink className="dropdown-item" to={`/profile/${userData._id}`}>
-                                    <BsFillPersonFill />Profile
+                                    <BsFillPersonFill />Perfil
                                 </NavLink>
 
                                 {/* <NavDropdown.Divider /> */}
@@ -53,28 +53,28 @@ function Header() {
                                     <BsFillGridFill />Sells
                             </NavLink> */}
                                 <NavLink className="dropdown-item" to="/messages">
-                                    <BsFillEnvelopeFill />Messages
+                                    <BsFillEnvelopeFill />Mensagens
                             </NavLink>
                                 {/* <NavLink className="dropdown-item" to="/wishlist">
                                     <BsFillHeartFill />Wishlist
                             </NavLink> */}
 
                                 <NavDropdown.Divider />
-
+                                
                                 <NavLink className="dropdown-item" to="/auth/logout" onClick={() => {
                                     setUserData(null)
                                 }}>
-                                    <IoLogOut />Log out
+                                    <IoLogOut />Sair
                                 </NavLink>
                             </NavDropdown>
                         </Nav>)
                         :
                         (<Nav>
                             <NavLink className="nav-item" id="nav-sign-in" to="/auth/login">
-                                Sign In
+                                Login
                             </NavLink>
                             <NavLink className="nav-item" id="nav-sign-up" to="/auth/register">
-                                Sign Up
+                                Cadastrar-se
                             </NavLink>
                         </Nav>)
                     }

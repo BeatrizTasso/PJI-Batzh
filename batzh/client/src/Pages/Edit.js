@@ -78,7 +78,7 @@ function Edit({ match, history }) {
         <>
             <SimpleSider />
             <div className='container'>
-                <h1 className="heading">Edit product</h1>
+                <h1 className="heading">Editar produtos</h1>
                 <Form onSubmit={onSubmitHandler}>
                     {alertShow &&
                         <Alert variant="danger" onClose={() => setAlertShow(false)} dismissible>
@@ -89,12 +89,12 @@ function Edit({ match, history }) {
                     }
                     <Form.Row>
                         <Form.Group as={Col} controlId="formGridTitle">
-                            <Form.Label>Title</Form.Label>
+                            <Form.Label>Nome</Form.Label>
                             <Form.Control type="text" placeholder="Enter title" name="title" value={product.title} onChange={onChangeHandler} required />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridPrice">
-                            <Form.Label>Price</Form.Label>
+                            <Form.Label>Preço</Form.Label>
                             <Form.Control type="number" step="0.01" placeholder="Price" name="price" value={product.price} onChange={onChangeHandler} required />
                         </Form.Group>
                     </Form.Row>
@@ -106,26 +106,24 @@ function Edit({ match, history }) {
 
                     <Form.Row>
                         <Form.Group as={Col} controlId="formGridCity">
-                            <Form.Label>City</Form.Label>
+                            <Form.Label>Cidade</Form.Label>
                             <Form.Control name="city" placeholder="Sofia" value={product.city} onChange={onChangeHandler} required />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridCategory">
-                            <Form.Label>Category</Form.Label>
+                            <Form.Label>Categoria</Form.Label>
                             <Form.Control as="select" value={product.category} name="category" onChange={onChangeHandler} required >
-                                <option>Choose...</option>
-                                <option>properties</option>
-                                <option>auto</option>
-                                <option>electronics</option>
-                                <option>clothes</option>
-                                <option>toys</option>
-                                <option>home</option>
-                                <option>garden</option>
+                                <option>Escolha...</option>
+                                <option>Doces</option>
+                                <option>Salgados</option>
+                                <option>Roupas</option>
+                                <option>Brinquedos</option>
+                                <option>Acessórios</option>
                             </Form.Control>
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridImage" >
-                            <Form.Label>Image</Form.Label>
+                            <Form.Label>Imagem</Form.Label>
                             <Form.Control name="image" type="file" onChange={onChangeHandler} />
                         </Form.Group>
                     </Form.Row>
@@ -134,7 +132,7 @@ function Edit({ match, history }) {
                             Please wait... <Spinner animation="border" />
                         </Button>
                         :
-                        <Button className="col-lg-12" variant="dark" type="submit">Add product</Button>
+                        <Button className="col-lg-12" variant="dark" type="submit">Adicionar produto</Button>
                     }
                 </Form>
             </div>

@@ -92,7 +92,7 @@ function EditProfile({ history }) {
                             <Col lg={3} md={5} sm={12}>
                                 <label htmlFor="file-upload" className="custom-file-upload">
                                     <OverlayTrigger placement="bottom"
-                                        overlay={<Tooltip>Click to select a photo</Tooltip>}
+                                        overlay={<Tooltip>Selecione uma foto</Tooltip>}
                                     >
                                         <img id="avatar" src={user.avatar} alt="user-avatar"/>
                                     </OverlayTrigger>
@@ -114,12 +114,12 @@ function EditProfile({ history }) {
                                 ) : (
                                         <>
                                             <OverlayTrigger placement="bottom"
-                                                overlay={<Tooltip> Save changes</Tooltip>}
+                                                overlay={<Tooltip> Salvar as mudanças</Tooltip>}
                                             >
                                                 <span onClick={handleSave}><TiTick /></span>
                                             </OverlayTrigger>
                                             <OverlayTrigger placement="bottom"
-                                                overlay={<Tooltip>Discard changes </Tooltip>}
+                                                overlay={<Tooltip>Descartar edições</Tooltip>}
                                             >
                                                 <span onClick={handleDiscard}><AiFillCloseSquare /></span>
                                             </OverlayTrigger>
@@ -134,8 +134,8 @@ function EditProfile({ history }) {
             <div className="container">
                 <Row>
                     <Col lg={2} sm={12} id="aside">
-                        <Button disabled variant="dark" id="active-sells">Active Sells</Button>{' '}
-                        <Button disabled variant="dark" id="archived-sells">Archived</Button>{' '}
+                        <Button disabled variant="dark" id="active-sells">Produtos á venda</Button>{' '}
+                        <Button disabled variant="dark" id="archived-sells">Arquivados</Button>{' '}
                         <Button disabled variant="dark" id="wishlist">Wishlist</Button>{' '}
                     </Col>
                     <Col lg={10} sm={12} disabled>

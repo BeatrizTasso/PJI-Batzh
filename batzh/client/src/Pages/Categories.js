@@ -61,13 +61,13 @@ function Categories({ match }) {
             <div className="container">
                 <Dropdown id="dropdown-sort">
                     <Dropdown.Toggle variant="light" id="dropdown-basic">
-                        Sort <BiSort />
+                        Filtrar <BiSort />
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <Dropdown.Item onClick={() => { setSort('oldest') }}>Oldest <BiDownArrowAlt /></Dropdown.Item>
-                        <Dropdown.Item onClick={() => { setSort('newest') }}>Newest <BiUpArrowAlt /></Dropdown.Item>
-                        <Dropdown.Item onClick={() => { setSort('lowerPrice') }}>Price <BiSortDown /></Dropdown.Item>
-                        <Dropdown.Item onClick={() => { setSort('biggerPrice') }}>Price <BiSortUp /> </Dropdown.Item>
+                        <Dropdown.Item onClick={() => { setSort('oldest') }}>Mais antigos <BiDownArrowAlt /></Dropdown.Item>
+                        <Dropdown.Item onClick={() => { setSort('newest') }}>Mais recentes <BiUpArrowAlt /></Dropdown.Item>
+                        <Dropdown.Item onClick={() => { setSort('lowerPrice') }}>Maior valor <BiSortDown /></Dropdown.Item>
+                        <Dropdown.Item onClick={() => { setSort('biggerPrice') }}>Menor valor <BiSortUp /> </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 {!loading ?

@@ -7,26 +7,26 @@ const userSchema = new mongoose.Schema({
     name: {
         type: String,
         trim: true,
-        required: 'Please fill a name. It can be your real one or a username.'
+        required: 'None obrigatório.'
     },
     email: {
         type: String,
         trim: true,
         lowercase: true,
         unique: true,
-        required: 'Email address is required',
+        required: 'Email obrigatório',
         match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
     },
     password: {
         type: String,
         trim: true,
-        required: ['Password is required'],
-        minlength: [8, 'Password should be at least 8 characters long']
+        required: ['Senha obrigatória'],
+        minlength: [8, 'A senha precisa ter no mínimo 8 caratéres']
     },
     phoneNumber: {
         type: String,
         trim: true,
-        required: ['Phone number is required'],
+        required: ['Número de telefone obrigatório'],
     },
     gender: {
         type: String,

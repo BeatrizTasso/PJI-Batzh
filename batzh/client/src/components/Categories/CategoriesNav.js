@@ -10,30 +10,24 @@ import { MdPhoneAndroid } from 'react-icons/md'
 function CategoriesNav() {
     return (
         <div className="container" id="categories">
-            <h1>Categories</h1>
+            <h1>Categorias</h1>
             <Link to="/categories/all">
                 <Button variant="dark" id="all"><TiSortAlphabetically />All</Button>{' '}
             </Link>
             <Link to="/categories/properties">
-                <Button variant="dark" id="properties"><BsHouseDoorFill />Properties</Button>{' '}
+                <Button variant="dark" id="properties"><GiFlowerPot />Doces</Button>{' '}
             </Link>
             <Link to="/categories/auto">
-                <Button variant="dark" id="auto"><AiFillCar />Auto</Button>{' '}
+                <Button variant="dark" id="auto"><AiFillCar />Salgados</Button>{' '}
             </Link>
             <Link to="/categories/home">
-                <Button variant="dark" id="home"><BsFillHouseFill />Home</Button>{' '}
-            </Link>
-            <Link to="/categories/electronics">
-                <Button variant="dark" id="electronics"><MdPhoneAndroid />Electronics</Button>{' '}
+                <Button variant="dark" id="home"><BsFillHouseFill />Acessórios</Button>{' '}
             </Link>
             <Link to="/categories/clothes">
-                <Button variant="dark" id="clothes"><GiClothes />Clothes</Button>{' '}
+                <Button variant="dark" id="clothes"><GiClothes />Roupas</Button>{' '}
             </Link>
             <Link to="/categories/toys">
-                <Button variant="dark" id="toys"><BsFillPuzzleFill />Toys</Button>{' '}
-            </Link>
-            <Link to="/categories/garden">
-                <Button variant="dark" id="garden"><GiFlowerPot />Garden</Button>{' '}
+                <Button variant="dark" id="toys"><BsFillPuzzleFill />Brinquedos</Button>{' '}
             </Link>
         </div>
     )
