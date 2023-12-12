@@ -8,7 +8,7 @@ import { IoLogOut } from 'react-icons/io5'
 import './Header.css'
 function Header() {
     const { userData, setUserData } = useContext(Context)
-    const page = window.open('./pages/register')
+    //const page = window.open('./pages/register')
 
  //    page.addEventListener('DOMContentLoaded', () => {
  //       const EmpCli = page.document.getElementById('status')
