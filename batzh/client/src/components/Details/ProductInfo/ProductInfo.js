@@ -38,12 +38,12 @@ function ProductInfo({ params }) {
                 <span id="heartIconDetails" className="col-lg-1 col-sm-1" onClick={onHearthClick}>
                 {params.isAuth && <>
                     {!wish ? (
-                        <OverlayTrigger placement="top" overlay={<Tooltip>Add to Wishlist</Tooltip>}>
+                        <OverlayTrigger placement="top" overlay={<Tooltip>Adicionar na Wishlist</Tooltip>}>
                             <BsHeart />
                         </OverlayTrigger>
                     )
                         : (
-                            <OverlayTrigger placement="top" overlay={<Tooltip>Remove from Wishlist</Tooltip>}>
+                            <OverlayTrigger placement="top" overlay={<Tooltip>Remover da Wishlist</Tooltip>}>
                                 <BsHeartFill />
                             </OverlayTrigger>
                         )

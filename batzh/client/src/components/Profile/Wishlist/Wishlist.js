@@ -36,7 +36,7 @@ function Wishlist() {
                             }
                         </Row>
                     ) : (
-                            <p className="nothing-to-show">Nothing to show</p>
+                            <p className="nothing-to-show">Nada para mostrar</p>
                         )}
 
                 </>) :
