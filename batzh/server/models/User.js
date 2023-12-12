@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
     name: {
         type: String,
         trim: true,
-        required: 'None obrigatório.'
+        required: 'Nome obrigatório.'
     },
     email: {
         type: String,
@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
         lowercase: true,
         unique: true,
         required: 'Email obrigatório',
-        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
+        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'por favor coloque um email válido']
     },
     password: {
         type: String,

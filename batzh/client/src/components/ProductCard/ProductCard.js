@@ -9,8 +9,8 @@ function ProductCard({ params }) {
             <Link to={`/categories/${params.category}/${params._id}/details`}>
                 <Card.Img variant="top" src={params.image} />
                 <Card.Body>
-                    <Card.Title>{params.title}</Card.Title>
-                    <Card.Text>{(params.price).toFixed(2)}€</Card.Text>
+                <Card.Text>R${(params.price).toFixed(2)}</Card.Text>
+                <Card.Title>{params.title}</Card.Title>
                 </Card.Body>
             </Link>
             <Card.Footer>

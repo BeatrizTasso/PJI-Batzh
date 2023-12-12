@@ -49,7 +49,7 @@ function Aside({ params, history }) {
         <aside>
             <div className="product-details-seller">
                 <div id="priceLabel" className="col-lg-12">
-                    <h4 id="product-price-heading">Product Price </h4>
+                    <h4 id="product-price-heading">Preço do produto </h4>
                     {params.isSeller &&
                         <>
                             <OverlayTrigger placement="top" overlay={<Tooltip>Edit the selling</Tooltip>}>
@@ -65,12 +65,12 @@ function Aside({ params, history }) {
 
                         </>
                     }
-                    {params.price && <h1 id="price-heading">{(params.price).toFixed(2)}€</h1>}
+                    {params.price && <h1 id="price-heading">R${(params.price).toFixed(2)}</h1>}
                 </div>
                 {params.isAuth ? (<>
                     {!params.isSeller &&
                         <Button variant="dark" className="col-lg-10" id="btnContact" onClick={handleShow}>
-                            <RiMessage3Fill />Contact Seller
+                            <RiMessage3Fill />Contatar o vendedor
                         </Button>
                     }
                     <Link to={`/profile/${params.sellerId}`}>
@@ -81,16 +81,16 @@ function Aside({ params, history }) {
                             <p><BsFillPersonFill /> {params.name}</p>
                             <p><MdEmail /> {params.email}</p>
                             <p><MdPhoneAndroid /> {params.phoneNumber}</p>
-                            <p><FaSellsy /> {params.createdSells} sells in total</p>
+                            <p><FaSellsy /> {params.createdSells} Produtos á venda</p>
                         </Col>
                     </Link>
                 </>) : (
-                        <p id="guest-msg"><Link to="/auth/login">Sign In</Link> now to contact the seller!</p>
+                        <p id="guest-msg"><Link to="/auth/login">Login</Link> para entrar em contato com o vendedor!</p>
                     )}
             </div>
             <Modal show={showMsg} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Message</Modal.Title>
+                    <Modal.Title>Mensagem</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form>
@@ -100,14 +100,14 @@ function Aside({ params, history }) {
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="dark" onClick={onMsgSent}>Sent</Button>
-                    <Button variant="secondary" onClick={handleClose}>Close</Button>
+                    <Button variant="dark" onClick={onMsgSent}>Enviar</Button>
+                    <Button variant="secondary" onClick={handleClose}>Fechar</Button>
                 </Modal.Footer>
             </Modal>
 
             <Modal show={showArchive} onHide={handleCloseArchive}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Are you sure you want to archive this item?</Modal.Title>
+                    <Modal.Title>Tem certeza que deseja arquivar este item?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <p>
@@ -122,10 +122,10 @@ function Aside({ params, history }) {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseArchive}>
-                        Close
+                        Fechar
                     </Button>
                     <Button variant="success" onClick={handleSubmit}>
-                        Archive
+                        Arquivar
                     </Button>
                 </Modal.Footer>
             </Modal>

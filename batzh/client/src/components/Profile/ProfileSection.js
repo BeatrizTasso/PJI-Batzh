@@ -17,7 +17,7 @@ function ProfileSection({ params }) {
                         <p><BsFillPersonFill /> {params.name}</p>
                         <p><MdEmail /> {params.email}</p>
                         <p><MdPhoneAndroid /> {params.phoneNumber}</p>
-                        <p><FaSellsy /> {params.totalSells}Vendas</p>
+                        <p><FaSellsy /> {params.totalSells}Produtos</p>
                     </Col>
                     <span id="edit-icon">
                         <Link to={`/profile/${params._id}/edit`}><GrEdit /></Link>

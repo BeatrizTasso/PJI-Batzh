@@ -37,7 +37,7 @@ function DisabledCard({ params, history }) {
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Are you sure you want to make this item active?</Modal.Title>
+                    <Modal.Title>Tem certeza que deseja arquivar este item?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     By clicking <strong>Make Active</strong>, this sell will change
@@ -46,10 +46,10 @@ function DisabledCard({ params, history }) {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close
+                        Fechar
                     </Button>
                     <Button variant="success" onClick={handleSubmit}>
-                        Make Active
+                        Colocar á venda novamente
                     </Button>
                 </Modal.Footer>
             </Modal>
