@@ -23,7 +23,7 @@ function ActiveSells({ params, history }) {
         <>
             {!loading ?
                 (<>
-                    <h1 className="heading">Produtos arquivados</h1>
+                    <h1 className="heading">Produtos á venda</h1>
                     {products ? (
                         <Row>
                             {products

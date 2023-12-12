@@ -59,7 +59,7 @@ function Login({ history }) {
                     </Form.Group>
                     {loading ?
                         <Button className="col-lg-12 btnAuth" variant="dark" disabled >
-                            Aguarde... <Spinner animation="border" />
+                            Please wait... <Spinner animation="border" />
                         </Button>
                         :
                         <Button variant="dark" className="col-lg-12 btnAuth" type="submit">Login</Button>

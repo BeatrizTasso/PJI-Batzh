@@ -108,7 +108,7 @@ class AddProduct extends Component {
                         </Form.Row>
                         {this.state.loading ?
                             <Button className="col-lg-12" variant="dark" disabled >
-                                Please wait... <Spinner animation="border" />
+                                Aguarde, por favor... <Spinner animation="border" />
                             </Button>
                             :
                             <Button className="col-lg-12" variant="dark" type="submit">Adicionar Produto</Button>
