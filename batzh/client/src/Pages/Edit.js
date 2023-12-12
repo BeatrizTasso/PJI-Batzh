@@ -100,7 +100,7 @@ function Edit({ match, history }) {
                     </Form.Row>
 
                     <Form.Group controlId="formGridDescription.ControlTextarea1">
-                        <Form.Label>Description</Form.Label>
+                        <Form.Label>Descrição</Form.Label>
                         <Form.Control as="textarea" rows={3} name="description" defaultValue={product.description} onChange={onChangeHandler} required />
                     </Form.Group>
 
@@ -129,7 +129,7 @@ function Edit({ match, history }) {
                     </Form.Row>
                     {loading ?
                         <Button className="col-lg-12" variant="dark" disabled >
-                            Please wait... <Spinner animation="border" />
+                            Aguarde, por favor... <Spinner animation="border" />
                         </Button>
                         :
                         <Button className="col-lg-12" variant="dark" type="submit">Adicionar produto</Button>

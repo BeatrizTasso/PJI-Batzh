@@ -57,7 +57,7 @@ function SellerProfile({ params, history }) {
             </div>
             <Modal show={showMsg} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Messagem</Modal.Title>
+                    <Modal.Title>Mensagem</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form>

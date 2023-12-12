@@ -99,13 +99,13 @@ function Register({ history }) {
                         </Form.Group>
                         <Form.Group className="col-lg-6">
                             <Form.Label>Digite sua senha novamente *</Form.Label>
-                            <Form.Control type="password" name="repeatPassword" placeholder="Repeat password" onChange={handleChanges} required />
+                            <Form.Control type="password" name="repeatPassword" placeholder="Repita a senha" onChange={handleChanges} required />
                         </Form.Group>
                     </Form.Row>
                     
                     {loading ?
                         <Button className="col-lg-12 btnAuth" variant="dark" disabled >
-                            Please wait... <Spinner animation="border" />
+                            Aguarde, por favor... <Spinner animation="border" />
                         </Button>
                         :
                         <Button variant="dark" className="col-lg-12 btnAuth" type="submit">Cadastrar-se</Button>
