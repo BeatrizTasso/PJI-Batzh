@@ -109,17 +109,6 @@ function Aside({ params, history }) {
                 <Modal.Header closeButton>
                     <Modal.Title>Tem certeza que deseja arquivar este item?</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                    <p>
-                        By clicking <strong>Archive</strong>, this sell will change
-                    it's status to <strong>Archived</strong>,
-                    which means that no one but you will be able see it.
-                    You may want to change the status to <strong>Actived</strong> if you have
-                    sold the item or you don't want to sell it anymore.
-                    </p>
-
-                    Don't worry, you can unarchive it at any time from Profile - Sells!
-                </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseArchive}>
                         Fechar

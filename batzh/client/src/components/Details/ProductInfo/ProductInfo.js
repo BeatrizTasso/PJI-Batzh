@@ -57,7 +57,7 @@ function ProductInfo({ params }) {
                     <Tab eventKey="details" title="Details" id="tab-details">
                         {params.description}
                         <hr />
-                        <p id="details-footer" className="text-muted">Product listed at {params.addedAt}</p>
+                        <p id="details-footer" className="text-muted">Produto listado em {params.addedAt}</p>
                     </Tab>
                     {/* <Tab eventKey="aboutSeller" title="About seller">
                         <p>Name: {params.name || "Not specified"}</p>

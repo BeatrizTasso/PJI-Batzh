@@ -39,11 +39,6 @@ function DisabledCard({ params, history }) {
                 <Modal.Header closeButton>
                     <Modal.Title>Tem certeza que deseja arquivar este item?</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                    By clicking <strong>Make Active</strong>, this sell will change
-                    it's status to <strong>Active</strong>,
-                    which means that everyone on this Web site will see it.
-                </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Fechar
