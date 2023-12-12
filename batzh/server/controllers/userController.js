@@ -13,10 +13,10 @@ router.patch('/edit-profile/:id', async (req, res) => {
         let errors = [];
         let checkUser = await User.findOne({ email });
 
-        if (checkUser && checkUser._id.toString() !== req.user._id.toString()) errors.push('This email address is already in use; ');
-        if (name.length < 3 || name.length > 50) errors.push('Name should be at least 3 characters long and max 50 characters long; ')
+        if (checkUser && checkUser._id.toString() !== req.user._id.toString()) errors.push('Este email já esta em uso; ');
+        if (name.length < 3 || name.length > 50) errors.push('O nome deve ter entre 3 e 50 caracteres; ')
        // if (/(\+)?(359|0)8[789]\d{1}(|-| )\d{3}(|-| )\d{3}/.test(phoneNumber) == false) errors.push('Phone number should be a valid BG number; ');
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) == false) errors.push("Please fill a valid email address; ");
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) == false) errors.push("Por favor insira um email válido; ");
 
         if (req.body.avatar) {
             if (!req.body.avatar.includes('image')) errors.push('The uploaded file should be an image; ');
@@ -27,10 +27,10 @@ router.patch('/edit-profile/:id', async (req, res) => {
         if (req.body.avatar) {
             let compressedImg = await productService.uploadImage(req.body.avatar);
             await userService.edit(req.params.id, { name, phoneNumber, email, avatar: compressedImg });
-            res.status(201).json({ message: 'Updated!', avatar: compressedImg });
+            res.status(201).json({ message: 'Atualizado!', avatar: compressedImg });
         } else {
             await userService.edit(req.params.id, { name, phoneNumber, email });
-            res.status(201).json({ message: 'Updated!' });
+            res.status(201).json({ message: 'Atualizado!' });
         }
     } catch (err) {
         res.status(404).json({ error: err.message });

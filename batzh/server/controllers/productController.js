@@ -68,12 +68,12 @@ router.post('/create', async (req, res) => {
     let { title, price, description, city, category, image } = req.body;
     try {
         let errors = [];
-        if (title.length < 3 || title.length > 50) errors.push('Title should be at least 3 characters long and max 50 characters long; ');
-        if (isNaN(Number(price))) errors.push('Price should be a number; ');
-        if (description.length < 10 || description.length > 1000) errors.push('Description should be at least 10 characters long and max 1000 characters long; ');
+        if (title.length < 3 || title.length > 50) errors.push('O nome do produto deve ter entre 3 e 50 caracteres; ');
+        if (isNaN(Number(price))) errors.push('O valor precisa ser um número; ');
+        if (description.length < 10 || description.length > 1000) errors.push('Descrição deve ter entre 10 e 1000 caracteres; ');
         if (/^[A-Za-z]+$/.test(city) == false) errors.push('City should contains only english letters; ')
         if (!image.includes('image')) errors.push('The uploaded file should be an image; ');
-        if (!category) errors.push('Category is required; ');
+        if (!category) errors.push('Categoria é obrigatório; ');
 
         if (errors.length >= 1) throw { message: [errors] };
 
@@ -103,17 +103,17 @@ router.patch('/edit/:id', isAuth, async (req, res) => {
         let product = await productService.findById(req.params.id);
         let errors = [];
         if (user._id.toString() !== product.seller.toString()) {
-            errors.push('You have no permission to perform this action! ')
+            errors.push('Você precisa ter um aautorização para realizar essa funçaõ! ')
         }
 
-        if (title.length < 3 || title.length > 50) errors.push('Title should be at least 3 characters long and max 50 characters long; ');
+        if (title.length < 3 || title.length > 50) errors.push('O nom eprecisa ter entre 3 e 50 caracteres; ');
         if (isNaN(Number(price))) errors.push('Price should be a number; ');
-        if (description.length < 10 || description.length > 1000) errors.push('Description should be at least 10 characters long and max 1000 characters long; ');
+        if (description.length < 10 || description.length > 1000) errors.push('A descriçaõ deve ter entre 10 e 1000 caracteres; ');
         if (/^[A-Za-z]+$/.test(city) == false) errors.push('City should contains only english letters; ')
         if (req.body.image) {
             if (!req.body.image.includes('image')) errors.push('The uploaded file should be an image; ');
         }
-        if (!category || category == "Choose...") errors.push('Category is required; ');
+        if (!category || category == "Choose...") errors.push('Categoria obrigatória; ');
 
         if (errors.length >= 1) throw { message: [errors] };
 
@@ -156,7 +156,7 @@ router.get('/sells/archived', async (req, res) => {
 router.get('/enable/:id', async (req, res) => {
     try {
         await Product.updateOne({ _id: req.params.id }, { active: true });
-        res.status(200).json({ msg: "Activated" });
+        res.status(200).json({ msg: "Ativado" });
     } catch (error) {
         res.status(500).json({ message: error.message })
     }
@@ -165,7 +165,7 @@ router.get('/enable/:id', async (req, res) => {
 router.get('/archive/:id', async (req, res) => {
     try {
         await Product.updateOne({ _id: req.params.id }, { active: false });
-        res.status(200).json({ msg: "Archived" });
+        res.status(200).json({ msg: "Arquivado" });
     } catch (error) {
         res.status(500).json({ message: error.message })
     }
